@@ -77,11 +77,11 @@
 		FE1DB760154C589700724E00 /* GeoWake */ = {
 			isa = PBXGroup;
 			children = (
-				FE1DB769154C589800724E00 /* AppDelegate.h */,
-				FE1DB76A154C589800724E00 /* AppDelegate.m */,
 				FE1DB76C154C589800724E00 /* MainStoryboard.storyboard */,
 				FE1DB76F154C589800724E00 /* ViewController.h */,
 				FE1DB770154C589800724E00 /* ViewController.m */,
+				FE1DB769154C589800724E00 /* AppDelegate.h */,
+				FE1DB76A154C589800724E00 /* AppDelegate.m */,
 				FE1DB761154C589700724E00 /* Supporting Files */,
 			);
 			path = GeoWake;

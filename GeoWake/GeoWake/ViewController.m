@@ -31,4 +31,6 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (IBAction)setAlarmButton:(id)sender {
+}
 @end
