@@ -15,6 +15,8 @@
 		FE1DB76B154C589800724E00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1DB76A154C589800724E00 /* AppDelegate.m */; };
 		FE1DB76E154C589800724E00 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE1DB76C154C589800724E00 /* MainStoryboard.storyboard */; };
 		FE1DB771154C589800724E00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1DB770154C589800724E00 /* ViewController.m */; };
+		FE1DB778154C67EE00724E00 /* 78-stopwatch.png in Resources */ = {isa = PBXBuildFile; fileRef = FE1DB777154C67EE00724E00 /* 78-stopwatch.png */; };
+		FE1DB77A154C69DE00724E00 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = FE1DB779154C69DE00724E00 /* 20-gear2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		FE1DB76D154C589800724E00 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FE1DB76F154C589800724E00 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FE1DB770154C589800724E00 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FE1DB777154C67EE00724E00 /* 78-stopwatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "78-stopwatch.png"; sourceTree = "<group>"; };
+		FE1DB779154C69DE00724E00 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 		FE1DB761154C589700724E00 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FE1DB779154C69DE00724E00 /* 20-gear2.png */,
+				FE1DB777154C67EE00724E00 /* 78-stopwatch.png */,
 				FE1DB762154C589700724E00 /* GeoWake-Info.plist */,
 				FE1DB763154C589700724E00 /* InfoPlist.strings */,
 				FE1DB766154C589700724E00 /* main.m */,
@@ -150,6 +156,8 @@
 			files = (
 				FE1DB765154C589700724E00 /* InfoPlist.strings in Resources */,
 				FE1DB76E154C589800724E00 /* MainStoryboard.storyboard in Resources */,
+				FE1DB778154C67EE00724E00 /* 78-stopwatch.png in Resources */,
+				FE1DB77A154C69DE00724E00 /* 20-gear2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
