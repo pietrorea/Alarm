@@ -33,7 +33,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Zor-7l-YPc" kind="push" id="9KC-Dk-odZ"/>
+                                    <segue destination="Zor-7l-YPc" kind="push" id="CAO-ZA-uEn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="No alarm has been set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="KCN-R9-RG6">
@@ -66,11 +66,11 @@
             </objects>
             <point key="canvasLocation" x="1021" y="738"/>
         </scene>
-        <!--View Controller - Set Alarm-->
+        <!--Set Alarm View Controller - Set Alarm-->
         <scene sceneID="6J6-Fi-Yow">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mv0-1b-rRS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Zor-7l-YPc" sceneMemberID="viewController">
+                <viewController id="Zor-7l-YPc" customClass="SetAlarmViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k2b-8g-0MJ">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -128,11 +128,18 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="setAlarmButton:" destination="Zor-7l-YPc" eventType="touchUpInside" id="TOc-1K-GWS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Set Alarm" id="D3J-qU-jl3"/>
+                    <connections>
+                        <outlet property="alarmDatePicker" destination="7pi-re-itv" id="wkg-V4-mDd"/>
+                        <outlet property="morningPrepTextField" destination="iHr-ZT-8Sp" id="mUQ-Pz-AOg"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="473" y="1362"/>
@@ -179,11 +186,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="20-gear2.png" width="26" height="28"/>
         <image name="78-stopwatch.png" width="22" height="26"/>
     </resources>
-    <classes>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -17,6 +17,7 @@
 		FE1DB771154C589800724E00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1DB770154C589800724E00 /* ViewController.m */; };
 		FE1DB778154C67EE00724E00 /* 78-stopwatch.png in Resources */ = {isa = PBXBuildFile; fileRef = FE1DB777154C67EE00724E00 /* 78-stopwatch.png */; };
 		FE1DB77A154C69DE00724E00 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = FE1DB779154C69DE00724E00 /* 20-gear2.png */; };
+		FE1DB780154C6F8300724E00 /* SetAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1DB77F154C6F8300724E00 /* SetAlarmViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		FE1DB770154C589800724E00 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FE1DB777154C67EE00724E00 /* 78-stopwatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "78-stopwatch.png"; sourceTree = "<group>"; };
 		FE1DB779154C69DE00724E00 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = "<group>"; };
+		FE1DB77E154C6F8300724E00 /* SetAlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetAlarmViewController.h; sourceTree = "<group>"; };
+		FE1DB77F154C6F8300724E00 /* SetAlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetAlarmViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				FE1DB76C154C589800724E00 /* MainStoryboard.storyboard */,
+				FE1DB77E154C6F8300724E00 /* SetAlarmViewController.h */,
+				FE1DB77F154C6F8300724E00 /* SetAlarmViewController.m */,
 				FE1DB76F154C589800724E00 /* ViewController.h */,
 				FE1DB770154C589800724E00 /* ViewController.m */,
 				FE1DB769154C589800724E00 /* AppDelegate.h */,
@@ -171,6 +176,7 @@
 				FE1DB767154C589700724E00 /* main.m in Sources */,
 				FE1DB76B154C589800724E00 /* AppDelegate.m in Sources */,
 				FE1DB771154C589800724E00 /* ViewController.m in Sources */,
+				FE1DB780154C6F8300724E00 /* SetAlarmViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
