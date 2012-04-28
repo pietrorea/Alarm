@@ -22,7 +22,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="L5a-Fa-nlx">
-                                <rect key="frame" x="85" y="296" width="150" height="37"/>
+                                <rect key="frame" x="91" y="290" width="139" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Set Alarm">
@@ -47,6 +47,11 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Alarm" id="4Vv-cR-Zlt"/>
+                    <connections>
+                        <outlet property="alarmButton" destination="L5a-Fa-nlx" id="aim-si-DQL"/>
+                        <outlet property="alarmStatusTextLabel" destination="KCN-R9-RG6" id="KK7-p3-6sg"/>
+                        <outlet property="displayTimeTextLabel" destination="WQ7-Cv-u5d" id="Zmz-NF-Wc5"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="473" y="740"/>
@@ -75,7 +80,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" id="7pi-re-itv">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" id="7pi-re-itv">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="357325290.40783399">
@@ -111,11 +116,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. 15 mins" minimumFontSize="17" id="iHr-ZT-8Sp">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. 15" minimumFontSize="17" id="iHr-ZT-8Sp">
                                 <rect key="frame" x="20" y="271" width="280" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Zor-7l-YPc" id="bd7-yk-URF"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k67-xj-04g">
                                 <rect key="frame" x="20" y="310" width="280" height="37"/>
@@ -135,14 +143,20 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Set Alarm" id="D3J-qU-jl3"/>
+                    <navigationItem key="navigationItem" title="Set Alarm" id="D3J-qU-jl3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="K0G-Xg-qSw">
+                            <connections>
+                                <action selector="cancelAlarmButton:" destination="Zor-7l-YPc" id="OP9-Z8-0TB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="alarmDatePicker" destination="7pi-re-itv" id="wkg-V4-mDd"/>
                         <outlet property="morningPrepTextField" destination="iHr-ZT-8Sp" id="mUQ-Pz-AOg"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="473" y="1362"/>
+            <point key="canvasLocation" x="463" y="1407"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yUd-NG-D5M">
@@ -186,6 +200,25 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="20-gear2.png" width="26" height="28"/>
         <image name="78-stopwatch.png" width="22" height="26"/>
     </resources>
+    <classes>
+        <class className="SetAlarmViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SetAlarmViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelAlarmButton:"/>
+                <relationship kind="action" name="setAlarmButton:"/>
+                <relationship kind="outlet" name="alarmDatePicker" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="morningPrepTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="alarmButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="alarmStatusTextLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="displayTimeTextLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
