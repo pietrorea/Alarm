@@ -7,93 +7,93 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE1DB729154C4C9D00724E00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1DB728154C4C9D00724E00 /* UIKit.framework */; };
-		FE1DB72B154C4C9D00724E00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1DB72A154C4C9D00724E00 /* Foundation.framework */; };
-		FE1DB72D154C4C9D00724E00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1DB72C154C4C9D00724E00 /* CoreGraphics.framework */; };
-		FE1DB733154C4C9D00724E00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE1DB731154C4C9D00724E00 /* InfoPlist.strings */; };
-		FE1DB735154C4C9D00724E00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1DB734154C4C9D00724E00 /* main.m */; };
-		FE1DB739154C4C9D00724E00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1DB738154C4C9D00724E00 /* AppDelegate.m */; };
-		FE1DB73C154C4C9D00724E00 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE1DB73A154C4C9D00724E00 /* MainStoryboard.storyboard */; };
-		FE1DB73F154C4C9D00724E00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1DB73E154C4C9D00724E00 /* ViewController.m */; };
+		FE1DB75B154C589700724E00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1DB75A154C589700724E00 /* UIKit.framework */; };
+		FE1DB75D154C589700724E00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1DB75C154C589700724E00 /* Foundation.framework */; };
+		FE1DB75F154C589700724E00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1DB75E154C589700724E00 /* CoreGraphics.framework */; };
+		FE1DB765154C589700724E00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE1DB763154C589700724E00 /* InfoPlist.strings */; };
+		FE1DB767154C589700724E00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1DB766154C589700724E00 /* main.m */; };
+		FE1DB76B154C589800724E00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1DB76A154C589800724E00 /* AppDelegate.m */; };
+		FE1DB76E154C589800724E00 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE1DB76C154C589800724E00 /* MainStoryboard.storyboard */; };
+		FE1DB771154C589800724E00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1DB770154C589800724E00 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FE1DB724154C4C9D00724E00 /* GeoWake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoWake.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE1DB728154C4C9D00724E00 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		FE1DB72A154C4C9D00724E00 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		FE1DB72C154C4C9D00724E00 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		FE1DB730154C4C9D00724E00 /* GeoWake-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeoWake-Info.plist"; sourceTree = "<group>"; };
-		FE1DB732154C4C9D00724E00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FE1DB734154C4C9D00724E00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FE1DB736154C4C9D00724E00 /* GeoWake-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeoWake-Prefix.pch"; sourceTree = "<group>"; };
-		FE1DB737154C4C9D00724E00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FE1DB738154C4C9D00724E00 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FE1DB73B154C4C9D00724E00 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		FE1DB73D154C4C9D00724E00 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FE1DB73E154C4C9D00724E00 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FE1DB756154C589700724E00 /* GeoWake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoWake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE1DB75A154C589700724E00 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FE1DB75C154C589700724E00 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FE1DB75E154C589700724E00 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FE1DB762154C589700724E00 /* GeoWake-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeoWake-Info.plist"; sourceTree = "<group>"; };
+		FE1DB764154C589700724E00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE1DB766154C589700724E00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE1DB768154C589700724E00 /* GeoWake-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeoWake-Prefix.pch"; sourceTree = "<group>"; };
+		FE1DB769154C589800724E00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FE1DB76A154C589800724E00 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FE1DB76D154C589800724E00 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		FE1DB76F154C589800724E00 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FE1DB770154C589800724E00 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FE1DB721154C4C9D00724E00 /* Frameworks */ = {
+		FE1DB753154C589700724E00 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE1DB729154C4C9D00724E00 /* UIKit.framework in Frameworks */,
-				FE1DB72B154C4C9D00724E00 /* Foundation.framework in Frameworks */,
-				FE1DB72D154C4C9D00724E00 /* CoreGraphics.framework in Frameworks */,
+				FE1DB75B154C589700724E00 /* UIKit.framework in Frameworks */,
+				FE1DB75D154C589700724E00 /* Foundation.framework in Frameworks */,
+				FE1DB75F154C589700724E00 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FE1DB719154C4C9D00724E00 = {
+		FE1DB74B154C589700724E00 = {
 			isa = PBXGroup;
 			children = (
-				FE1DB72E154C4C9D00724E00 /* GeoWake */,
-				FE1DB727154C4C9D00724E00 /* Frameworks */,
-				FE1DB725154C4C9D00724E00 /* Products */,
+				FE1DB760154C589700724E00 /* GeoWake */,
+				FE1DB759154C589700724E00 /* Frameworks */,
+				FE1DB757154C589700724E00 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FE1DB725154C4C9D00724E00 /* Products */ = {
+		FE1DB757154C589700724E00 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FE1DB724154C4C9D00724E00 /* GeoWake.app */,
+				FE1DB756154C589700724E00 /* GeoWake.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FE1DB727154C4C9D00724E00 /* Frameworks */ = {
+		FE1DB759154C589700724E00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FE1DB728154C4C9D00724E00 /* UIKit.framework */,
-				FE1DB72A154C4C9D00724E00 /* Foundation.framework */,
-				FE1DB72C154C4C9D00724E00 /* CoreGraphics.framework */,
+				FE1DB75A154C589700724E00 /* UIKit.framework */,
+				FE1DB75C154C589700724E00 /* Foundation.framework */,
+				FE1DB75E154C589700724E00 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FE1DB72E154C4C9D00724E00 /* GeoWake */ = {
+		FE1DB760154C589700724E00 /* GeoWake */ = {
 			isa = PBXGroup;
 			children = (
-				FE1DB737154C4C9D00724E00 /* AppDelegate.h */,
-				FE1DB738154C4C9D00724E00 /* AppDelegate.m */,
-				FE1DB73A154C4C9D00724E00 /* MainStoryboard.storyboard */,
-				FE1DB73D154C4C9D00724E00 /* ViewController.h */,
-				FE1DB73E154C4C9D00724E00 /* ViewController.m */,
-				FE1DB72F154C4C9D00724E00 /* Supporting Files */,
+				FE1DB769154C589800724E00 /* AppDelegate.h */,
+				FE1DB76A154C589800724E00 /* AppDelegate.m */,
+				FE1DB76C154C589800724E00 /* MainStoryboard.storyboard */,
+				FE1DB76F154C589800724E00 /* ViewController.h */,
+				FE1DB770154C589800724E00 /* ViewController.m */,
+				FE1DB761154C589700724E00 /* Supporting Files */,
 			);
 			path = GeoWake;
 			sourceTree = "<group>";
 		};
-		FE1DB72F154C4C9D00724E00 /* Supporting Files */ = {
+		FE1DB761154C589700724E00 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FE1DB730154C4C9D00724E00 /* GeoWake-Info.plist */,
-				FE1DB731154C4C9D00724E00 /* InfoPlist.strings */,
-				FE1DB734154C4C9D00724E00 /* main.m */,
-				FE1DB736154C4C9D00724E00 /* GeoWake-Prefix.pch */,
+				FE1DB762154C589700724E00 /* GeoWake-Info.plist */,
+				FE1DB763154C589700724E00 /* InfoPlist.strings */,
+				FE1DB766154C589700724E00 /* main.m */,
+				FE1DB768154C589700724E00 /* GeoWake-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -101,13 +101,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FE1DB723154C4C9D00724E00 /* GeoWake */ = {
+		FE1DB755154C589700724E00 /* GeoWake */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE1DB742154C4C9D00724E00 /* Build configuration list for PBXNativeTarget "GeoWake" */;
+			buildConfigurationList = FE1DB774154C589800724E00 /* Build configuration list for PBXNativeTarget "GeoWake" */;
 			buildPhases = (
-				FE1DB720154C4C9D00724E00 /* Sources */,
-				FE1DB721154C4C9D00724E00 /* Frameworks */,
-				FE1DB722154C4C9D00724E00 /* Resources */,
+				FE1DB752154C589700724E00 /* Sources */,
+				FE1DB753154C589700724E00 /* Frameworks */,
+				FE1DB754154C589700724E00 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -115,72 +115,72 @@
 			);
 			name = GeoWake;
 			productName = GeoWake;
-			productReference = FE1DB724154C4C9D00724E00 /* GeoWake.app */;
+			productReference = FE1DB756154C589700724E00 /* GeoWake.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FE1DB71B154C4C9D00724E00 /* Project object */ = {
+		FE1DB74D154C589700724E00 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
 			};
-			buildConfigurationList = FE1DB71E154C4C9D00724E00 /* Build configuration list for PBXProject "GeoWake" */;
+			buildConfigurationList = FE1DB750154C589700724E00 /* Build configuration list for PBXProject "GeoWake" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = FE1DB719154C4C9D00724E00;
-			productRefGroup = FE1DB725154C4C9D00724E00 /* Products */;
+			mainGroup = FE1DB74B154C589700724E00;
+			productRefGroup = FE1DB757154C589700724E00 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FE1DB723154C4C9D00724E00 /* GeoWake */,
+				FE1DB755154C589700724E00 /* GeoWake */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FE1DB722154C4C9D00724E00 /* Resources */ = {
+		FE1DB754154C589700724E00 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE1DB733154C4C9D00724E00 /* InfoPlist.strings in Resources */,
-				FE1DB73C154C4C9D00724E00 /* MainStoryboard.storyboard in Resources */,
+				FE1DB765154C589700724E00 /* InfoPlist.strings in Resources */,
+				FE1DB76E154C589800724E00 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FE1DB720154C4C9D00724E00 /* Sources */ = {
+		FE1DB752154C589700724E00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE1DB735154C4C9D00724E00 /* main.m in Sources */,
-				FE1DB739154C4C9D00724E00 /* AppDelegate.m in Sources */,
-				FE1DB73F154C4C9D00724E00 /* ViewController.m in Sources */,
+				FE1DB767154C589700724E00 /* main.m in Sources */,
+				FE1DB76B154C589800724E00 /* AppDelegate.m in Sources */,
+				FE1DB771154C589800724E00 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FE1DB731154C4C9D00724E00 /* InfoPlist.strings */ = {
+		FE1DB763154C589700724E00 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FE1DB732154C4C9D00724E00 /* en */,
+				FE1DB764154C589700724E00 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		FE1DB73A154C4C9D00724E00 /* MainStoryboard.storyboard */ = {
+		FE1DB76C154C589800724E00 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FE1DB73B154C4C9D00724E00 /* en */,
+				FE1DB76D154C589800724E00 /* en */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -188,7 +188,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		FE1DB740154C4C9D00724E00 /* Debug */ = {
+		FE1DB772154C589800724E00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -213,7 +213,7 @@
 			};
 			name = Debug;
 		};
-		FE1DB741154C4C9D00724E00 /* Release */ = {
+		FE1DB773154C589800724E00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -233,7 +233,7 @@
 			};
 			name = Release;
 		};
-		FE1DB743154C4C9D00724E00 /* Debug */ = {
+		FE1DB775154C589800724E00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -244,7 +244,7 @@
 			};
 			name = Debug;
 		};
-		FE1DB744154C4C9D00724E00 /* Release */ = {
+		FE1DB776154C589800724E00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -258,24 +258,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FE1DB71E154C4C9D00724E00 /* Build configuration list for PBXProject "GeoWake" */ = {
+		FE1DB750154C589700724E00 /* Build configuration list for PBXProject "GeoWake" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE1DB740154C4C9D00724E00 /* Debug */,
-				FE1DB741154C4C9D00724E00 /* Release */,
+				FE1DB772154C589800724E00 /* Debug */,
+				FE1DB773154C589800724E00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE1DB742154C4C9D00724E00 /* Build configuration list for PBXNativeTarget "GeoWake" */ = {
+		FE1DB774154C589800724E00 /* Build configuration list for PBXNativeTarget "GeoWake" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE1DB743154C4C9D00724E00 /* Debug */,
-				FE1DB744154C4C9D00724E00 /* Release */,
+				FE1DB775154C589800724E00 /* Debug */,
+				FE1DB776154C589800724E00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FE1DB71B154C4C9D00724E00 /* Project object */;
+	rootObject = FE1DB74D154C589700724E00 /* Project object */;
 }

@@ -13,7 +13,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FE1DB723154C4C9D00724E00"
+               BlueprintIdentifier = "FE1DB755154C589700724E00"
                BuildableName = "GeoWake.app"
                BlueprintName = "GeoWake"
                ReferencedContainer = "container:GeoWake.xcodeproj">
@@ -31,7 +31,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FE1DB723154C4C9D00724E00"
+            BlueprintIdentifier = "FE1DB755154C589700724E00"
             BuildableName = "GeoWake.app"
             BlueprintName = "GeoWake"
             ReferencedContainer = "container:GeoWake.xcodeproj">
@@ -50,7 +50,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FE1DB723154C4C9D00724E00"
+            BlueprintIdentifier = "FE1DB755154C589700724E00"
             BuildableName = "GeoWake.app"
             BlueprintName = "GeoWake"
             ReferencedContainer = "container:GeoWake.xcodeproj">
@@ -68,7 +68,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FE1DB723154C4C9D00724E00"
+            BlueprintIdentifier = "FE1DB755154C589700724E00"
             BuildableName = "GeoWake.app"
             BlueprintName = "GeoWake"
             ReferencedContainer = "container:GeoWake.xcodeproj">
