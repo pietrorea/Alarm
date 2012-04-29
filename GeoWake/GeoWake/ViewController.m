@@ -39,45 +39,20 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-/*- (void)setAlarmWithTime:(NSString *)alartmTime andPrepTimeMinutes:(NSString *)prepTimeMinutes
-{
-    self.alarmStatusTextLabel.text = @"You must leave your house at...";
-    self.displayTimeTextLabel.text = alartmTime;
-    self.alarmButton.titleLabel.textAlignment = UITextAlignmentCenter;
-    self.alarmButton.titleLabel.text = @"Change";
-    
-    if ([prepTimeMinutes length] == 0) {
-        UIAlertView * alert = [[UIAlertView alloc] 
-                               initWithTitle:@"Alert"
-                               message:@"How long will you need to get ready?"
-                               delegate:nil
-                               cancelButtonTitle:@"OK"
-                               otherButtonTitles:nil];
-        
-        [alert show];
-        return;
-    }
-    
-    [self.navigationController popViewControllerAnimated:YES];
-}
 
-- (void) cancelAlarm
+- (void) doneSettingAlarm: (NSDate *) alarmTime andPrepTimeMinutes: (NSString *) prepTimeMinutes
 {
-    self.alarmStatusTextLabel.text = @"No alarm has been set";
-    self.displayTimeTextLabel.text = @"0:00";
-    self.alarmButton.titleLabel.text = @"Set Alarm";
-    [self.navigationController popViewControllerAnimated:YES];
-} */
-
-- (void) doneSettingAlarm: (NSString *) alartmTime andPrepTimeMinutes: (NSString *) prepTimeMinutes
-{
-    self.displayTimeTextLabel.text = alartmTime;
+    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"h:mma";
+    NSString *dateString = [dateFormatter stringFromDate:alarmTime];
+    
+    self.displayTimeTextLabel.text = dateString;
     self.alarmStatusTextLabel.text = @"You must leave your house at...";
     self.alarmButton.titleLabel.textAlignment = UITextAlignmentCenter;
     self.alarmButton.titleLabel.text = @"Change";
     
     
-    if ([alartmTime length] == 0) {
+    if ([dateString length] == 0) {
         UIAlertView * alert = [[UIAlertView alloc] 
                                initWithTitle:@"Alert"
                                message:@"When do you want to leave your house?"
@@ -103,8 +78,19 @@
     }
     
     
+    [self setLocalNotificationWithDate:alarmTime];
     [self.navigationController popViewControllerAnimated:YES];
+    
+}
 
+- (void) setLocalNotificationWithDate: (NSDate *) notificationDate {
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = notificationDate;
+    localNotification.alertBody = @"Time to wake up!";
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    
+    [[UIApplication sharedApplication]scheduleLocalNotification:localNotification];
+    
 }
 
 

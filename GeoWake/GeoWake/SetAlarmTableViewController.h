@@ -30,6 +30,6 @@
 
 @protocol SetAlarmTableViewControllerDelegate <NSObject>
 
-- (void) doneSettingAlarm: (NSString *) alartmTime andPrepTimeMinutes: (NSString *) prepTimeMinutes; 
+- (void) doneSettingAlarm: (NSDate *) alarmTime andPrepTimeMinutes: (NSString *) prepTimeMinutes; 
 
 @end

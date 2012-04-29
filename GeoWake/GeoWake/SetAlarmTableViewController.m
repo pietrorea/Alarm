@@ -8,6 +8,8 @@
 
 #import "SetAlarmTableViewController.h"
 
+NSDate *currentAlarmDate;
+
 @interface SetAlarmTableViewController ()
 
 @end
@@ -33,6 +35,7 @@
 {
     [super viewDidLoad];
     
+    currentAlarmDate = [NSDate date];
     [timePicker addTarget:self action:@selector(timeChanged) forControlEvents:UIControlEventValueChanged];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -58,46 +61,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -119,7 +82,7 @@
 
 - (IBAction)doneSettingAlarmButton:(id)sender 
 {
-    [self.delegate doneSettingAlarm:leavingTimeTextLabel.text
+    [self.delegate doneSettingAlarm:currentAlarmDate
                  andPrepTimeMinutes:prepTimeTextLabel.text];
     
 }
@@ -159,6 +122,7 @@
     if (pathToSelectedRow.row == 0) {
         
         NSDate * selectedDate = [timePicker date];
+        currentAlarmDate = selectedDate;
         NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
         dateFormatter.dateFormat = @"h:mma";
         NSString *dateString = [dateFormatter stringFromDate:selectedDate];

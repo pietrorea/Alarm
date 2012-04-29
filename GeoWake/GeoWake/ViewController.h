@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *alarmStatusTextLabel;
 @property (weak, nonatomic) IBOutlet UIButton *alarmButton;
 
+- (void) setLocalNotificationWithDate: (NSDate *) notificationDate;
 
 @end

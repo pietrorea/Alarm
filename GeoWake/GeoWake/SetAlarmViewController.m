@@ -12,8 +12,7 @@
 
 @end
 
-/* Store original center point */
-CGPoint originalCenter;
+NSDate * selectedAlarmDate;
 
 @implementation SetAlarmViewController
 @synthesize alarmDatePicker;
@@ -24,9 +23,8 @@ CGPoint originalCenter;
 {
     [super viewDidLoad];
     
-    originalCenter = self.view.center;
+    selectedAlarmDate = [NSDate date];
     morningPrepTextField.keyboardType = UIKeyboardTypeNumberPad;
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewDidUnload
@@ -64,33 +62,6 @@ CGPoint originalCenter;
 - (IBAction)cancelAlarmButton:(id)sender {
     
     [[self delegate] cancelAlarm];
-}
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField 
-{
-    
-    /* I need to fix the offset & timing */
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.35];
-    self.view.center = CGPointMake(originalCenter.x, originalCenter.y - 216);
-    [UIView commitAnimations];
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
-    
-    /* I need to fix the offset & timinh */
-    [textField resignFirstResponder];
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.20];
-    self.view.center = CGPointMake(originalCenter.x, originalCenter.y - 68);
-    [UIView commitAnimations];
-}
-
-- (BOOL) textFieldShouldReturn: (UITextField *) textField
-{
-    [textField resignFirstResponder];
-    return YES;
 }
 
 @end
