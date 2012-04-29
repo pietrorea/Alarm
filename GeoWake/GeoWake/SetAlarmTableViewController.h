@@ -10,7 +10,11 @@
 #import <CoreLocation/CoreLocation.h>
 #import "SettingsViewController.h"
 
-@interface SetAlarmTableViewController : UITableViewController <SettingsViewControllerDelegate, CLLocationManagerDelegate>
+@interface SetAlarmTableViewController : UITableViewController <SettingsViewControllerDelegate, CLLocationManagerDelegate> {
+    
+}
+
+@property (nonatomic, weak) IBOutlet UILabel *coordinatesLabel;
 
 
 - (void)startMonitoringForLocationChanges:(CLLocation *)location;

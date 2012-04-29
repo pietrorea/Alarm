@@ -13,6 +13,7 @@
 @end
 
 @implementation SetAlarmTableViewController
+@synthesize coordinatesLabel;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -105,6 +106,13 @@
     NSLog(@"%@", location);
     
     // Create region and start monitoring it
+    
+    
+    // Set coordinates label
+    self.coordinatesLabel.text = [NSString stringWithFormat:@"%f, %f", location.coordinate.latitude, location.coordinate.longitude];
+    
+    // Dismiss location view controller
+    [self.navigationController popViewControllerAnimated:YES];
     
 }
 
