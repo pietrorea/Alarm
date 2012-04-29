@@ -67,6 +67,7 @@
         // Remove alarm
         NSLog(@"Alarm REMOVED");
         [[UIApplication sharedApplication] cancelLocalNotification:self.localNotification];
+        [self.locationManager stopUpdatingLocation];
     }
 }
 
