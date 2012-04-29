@@ -104,7 +104,7 @@
 {
     if (indexPath.row == 0) {
         
-        timePicker.datePickerMode = UIDatePickerModeDateAndTime;
+        timePicker.datePickerMode = UIDatePickerModeTime;
         
     }
     
