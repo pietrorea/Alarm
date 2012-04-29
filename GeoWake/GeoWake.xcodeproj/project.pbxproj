@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A40E2D4154CE4FF00382880 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A40E2D3154CE4FF00382880 /* MapKit.framework */; };
+		3A847F24154CB6FE002D1744 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A847F23154CB6FE002D1744 /* SettingsViewController.m */; };
+		3A847F27154CB709002D1744 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A847F26154CB709002D1744 /* CoreLocation.framework */; };
 		FE1DB75B154C589700724E00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1DB75A154C589700724E00 /* UIKit.framework */; };
 		FE1DB75D154C589700724E00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1DB75C154C589700724E00 /* Foundation.framework */; };
 		FE1DB75F154C589700724E00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1DB75E154C589700724E00 /* CoreGraphics.framework */; };
@@ -21,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A40E2D3154CE4FF00382880 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3A847F22154CB6FE002D1744 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		3A847F23154CB6FE002D1744 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		3A847F26154CB709002D1744 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FE1DB756154C589700724E00 /* GeoWake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoWake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1DB75A154C589700724E00 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FE1DB75C154C589700724E00 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -45,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A40E2D4154CE4FF00382880 /* MapKit.framework in Frameworks */,
+				3A847F27154CB709002D1744 /* CoreLocation.framework in Frameworks */,
 				FE1DB75B154C589700724E00 /* UIKit.framework in Frameworks */,
 				FE1DB75D154C589700724E00 /* Foundation.framework in Frameworks */,
 				FE1DB75F154C589700724E00 /* CoreGraphics.framework in Frameworks */,
@@ -57,6 +66,8 @@
 		FE1DB74B154C589700724E00 = {
 			isa = PBXGroup;
 			children = (
+				3A40E2D3154CE4FF00382880 /* MapKit.framework */,
+				3A847F26154CB709002D1744 /* CoreLocation.framework */,
 				FE1DB760154C589700724E00 /* GeoWake */,
 				FE1DB759154C589700724E00 /* Frameworks */,
 				FE1DB757154C589700724E00 /* Products */,
@@ -92,6 +103,8 @@
 				FE1DB769154C589800724E00 /* AppDelegate.h */,
 				FE1DB76A154C589800724E00 /* AppDelegate.m */,
 				FE1DB761154C589700724E00 /* Supporting Files */,
+				3A847F22154CB6FE002D1744 /* SettingsViewController.h */,
+				3A847F23154CB6FE002D1744 /* SettingsViewController.m */,
 			);
 			path = GeoWake;
 			sourceTree = "<group>";
@@ -177,6 +190,7 @@
 				FE1DB76B154C589800724E00 /* AppDelegate.m in Sources */,
 				FE1DB771154C589800724E00 /* ViewController.m in Sources */,
 				FE1DB780154C6F8300724E00 /* SetAlarmViewController.m in Sources */,
+				3A847F24154CB6FE002D1744 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +302,7 @@
 				FE1DB776154C589800724E00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
