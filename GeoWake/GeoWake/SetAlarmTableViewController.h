@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import "SettingsViewController.h"
 
-@interface SetAlarmTableViewController : UITableViewController
+@interface SetAlarmTableViewController : UITableViewController <SettingsViewControllerDelegate, CLLocationManagerDelegate>
+
+
+- (void)startMonitoringForLocationChanges:(CLLocation *)location;
 
 @end

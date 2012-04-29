@@ -99,4 +99,24 @@
      */
 }
 
+- (void)startMonitoringForLocationChanges:(CLLocation *)location
+{
+    NSLog(@"HELLO?");
+    NSLog(@"%@", location);
+    
+    // Create region and start monitoring it
+    
+}
+
+- (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
+{
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender 
+{    
+    SettingsViewController *settingsVC = segue.destinationViewController;
+    settingsVC.delegate = self;
+}
+
 @end

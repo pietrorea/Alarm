@@ -14,6 +14,7 @@
 
 @implementation SettingsViewController
 @synthesize setHomeLocationButton;
+@synthesize delegate;
 
 /*
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -42,10 +43,10 @@
     // Set locationManager delegate
     [locationManager setDelegate:self];
     
+    [locationManager startUpdatingLocation];
+    
     // Show user location on map
     [worldView setShowsUserLocation:YES];
-    
-    NSLog(@"HEY!!");
 }
 
 - (void)viewDidUnload
@@ -61,7 +62,8 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    NSLog(@"%@", newLocation);
+    NSLog(@"HEYYYY!");
+    
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
@@ -75,8 +77,12 @@
     CLLocationCoordinate2D loc = [userLocation coordinate];
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 100, 100);
     [worldView setRegion:region animated:YES];
-    
+
     self.setHomeLocationButton.hidden = NO;
 }
 
+- (IBAction)setLocation:(id)sender {
+    [self.delegate startMonitoringForLocationChanges:locationManager.location];
+    [locationManager stopUpdatingLocation];
+}
 @end

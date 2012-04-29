@@ -15,4 +15,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *alarmStatusTextLabel;
 @property (weak, nonatomic) IBOutlet UIButton *alarmButton;
 
+
 @end

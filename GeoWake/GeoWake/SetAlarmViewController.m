@@ -20,13 +20,6 @@ CGPoint originalCenter;
 @synthesize morningPrepTextField;
 @synthesize delegate;
 
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    
-//    UIViewController *vc = segue.destinationViewController;
-//    vc.hidesBottomBarWhenPushed = YES;
-//    
-//}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];

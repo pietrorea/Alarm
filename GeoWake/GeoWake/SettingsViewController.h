@@ -10,6 +10,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
+@protocol SettingsViewControllerDelegate;
+
 @interface SettingsViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 {
     CLLocationManager *locationManager;
@@ -19,5 +21,13 @@
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *setHomeLocationButton;
+@property (weak, nonatomic) id <SettingsViewControllerDelegate> delegate;
+- (IBAction)setLocation:(id)sender;
+
+@end
+
+@protocol SettingsViewControllerDelegate <NSObject>
+
+- (void)startMonitoringForLocationChanges:(CLLocation *)location;
 
 @end
