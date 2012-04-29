@@ -18,6 +18,7 @@
 @synthesize displayTimeTextLabel;
 @synthesize alarmStatusTextLabel;
 @synthesize alarmButton;
+@synthesize isInLocalRange;
 
 - (void)viewDidLoad
 {

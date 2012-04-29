@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *displayTimeTextLabel;
 @property (weak, nonatomic) IBOutlet UILabel *alarmStatusTextLabel;
 @property (weak, nonatomic) IBOutlet UIButton *alarmButton;
+@property (nonatomic) BOOL isInLocalRange;
 
 - (void) setLocalNotificationWithDate: (NSDate *) notificationDate;
 
