@@ -17,7 +17,6 @@
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *location;
 @property BOOL disableAlarm;
-@property (strong, nonatomic) UILocalNotification *localNotification;
 
 - (void) setLocalNotificationWithDate: (NSDate *) notificationDate;
 
