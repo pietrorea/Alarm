@@ -9,6 +9,7 @@
 #import "SetAlarmTableViewController.h"
 #import "ViewController.h"
 #import <CoreLocation/CoreLocation.h>
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -21,6 +22,7 @@
 @synthesize alarmButton;
 @synthesize locationManager;
 @synthesize location;
+@synthesize disableAlarm;
 
 - (void)viewDidLoad
 {
@@ -42,10 +44,36 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (void)startLocationMonitor
+{
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    self.locationManager.delegate = self;
+    
+    CLRegion *region = [[CLRegion alloc] initCircularRegionWithCenter:self.location.coordinate radius:10 identifier:@"HomeRegion"];
+
+    [self.locationManager startUpdatingLocation];
+    
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"Location: %@", newLocation);
+    NSLog(@"%f", [newLocation distanceFromLocation:self.location]);
+    if ([newLocation distanceFromLocation:self.location] > 10) {
+        self.disableAlarm = YES;
+        [self.locationManager stopUpdatingLocation];
+    }
+}
+
+
 - (void) doneSettingAlarm: (NSDate *) alarmTime andPrepTimeMinutes: (NSString *) prepTimeMinutes andLocation:(CLLocation *)loc
 {
+    // Save location
     self.location = loc;
-
+    
+    [self startLocationMonitor];
+    
     NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"h:mma";
     NSString *dateString = [dateFormatter stringFromDate:alarmTime];
@@ -93,7 +121,9 @@
     localNotification.alertBody = @"Time to wake up!";
     localNotification.soundName = UILocalNotificationDefaultSoundName;
     
-    [[UIApplication sharedApplication]scheduleLocalNotification:localNotification];
+    if (disableAlarm) {
+        [[UIApplication sharedApplication]scheduleLocalNotification:localNotification];
+    }
     
 }
 

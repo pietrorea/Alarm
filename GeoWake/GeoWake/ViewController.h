@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *alarmButton;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *location;
+@property BOOL disableAlarm;
 
 - (void) setLocalNotificationWithDate: (NSDate *) notificationDate;
 
