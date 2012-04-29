@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3A40E2D4154CE4FF00382880 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A40E2D3154CE4FF00382880 /* MapKit.framework */; };
-		3A847F24154CB6FE002D1744 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A847F23154CB6FE002D1744 /* SettingsViewController.m */; };
 		3A847F27154CB709002D1744 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A847F26154CB709002D1744 /* CoreLocation.framework */; };
 		FE198730154CF0F70017CFBE /* SetAlarmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE19872F154CF0F70017CFBE /* SetAlarmTableViewController.m */; };
 		FE1DB75B154C589700724E00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1DB75A154C589700724E00 /* UIKit.framework */; };
@@ -25,8 +24,6 @@
 
 /* Begin PBXFileReference section */
 		3A40E2D3154CE4FF00382880 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		3A847F22154CB6FE002D1744 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		3A847F23154CB6FE002D1744 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		3A847F26154CB709002D1744 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FE19872E154CF0F70017CFBE /* SetAlarmTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetAlarmTableViewController.h; sourceTree = "<group>"; };
 		FE19872F154CF0F70017CFBE /* SetAlarmTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetAlarmTableViewController.m; sourceTree = "<group>"; };
@@ -98,8 +95,6 @@
 				FE1DB76C154C589800724E00 /* MainStoryboard.storyboard */,
 				FE19872E154CF0F70017CFBE /* SetAlarmTableViewController.h */,
 				FE19872F154CF0F70017CFBE /* SetAlarmTableViewController.m */,
-				3A847F22154CB6FE002D1744 /* SettingsViewController.h */,
-				3A847F23154CB6FE002D1744 /* SettingsViewController.m */,
 				FE1DB76F154C589800724E00 /* ViewController.h */,
 				FE1DB770154C589800724E00 /* ViewController.m */,
 				FE1DB769154C589800724E00 /* AppDelegate.h */,
@@ -189,7 +184,6 @@
 				FE1DB767154C589700724E00 /* main.m in Sources */,
 				FE1DB76B154C589800724E00 /* AppDelegate.m in Sources */,
 				FE1DB771154C589800724E00 /* ViewController.m in Sources */,
-				3A847F24154CB6FE002D1744 /* SettingsViewController.m in Sources */,
 				FE198730154CF0F70017CFBE /* SetAlarmTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
