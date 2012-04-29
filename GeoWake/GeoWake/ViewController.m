@@ -38,7 +38,7 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-- (void)setAlarmWithTime:(NSString *)alartmTime andPrepTimeMinutes:(NSString *)prepTimeMinutes
+/*- (void)setAlarmWithTime:(NSString *)alartmTime andPrepTimeMinutes:(NSString *)prepTimeMinutes
 {
     self.alarmStatusTextLabel.text = @"You must leave your house at...";
     self.displayTimeTextLabel.text = alartmTime;
@@ -66,14 +66,14 @@
     self.displayTimeTextLabel.text = @"0:00";
     self.alarmButton.titleLabel.text = @"Set Alarm";
     [self.navigationController popViewControllerAnimated:YES];
-}
+} */
 
 
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+/*- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     SetAlarmViewController *setAlarmViewController = [segue destinationViewController];
     setAlarmViewController.delegate = self;
-}
+}*/
 
 @end

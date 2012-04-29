@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SetAlarmViewController.h"
 
-@interface ViewController : UIViewController <SetAlarmViewControllerDelegate>
+@interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *displayTimeTextLabel;
 @property (weak, nonatomic) IBOutlet UILabel *alarmStatusTextLabel;
