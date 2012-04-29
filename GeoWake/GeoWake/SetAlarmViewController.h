@@ -23,7 +23,7 @@
 
 @protocol SetAlarmViewControllerDelegate <NSObject>
 
-- (void)setAlarmWithTime: (NSString *) alartmTime;
+- (void)setAlarmWithTime: (NSString *) alartmTime andPrepTimeMinutes: (NSString *) prepTimeMinutes; 
 
 - (void) cancelAlarm;
 

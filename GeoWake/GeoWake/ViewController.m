@@ -38,12 +38,25 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-- (void)setAlarmWithTime:(NSString *)alartmTime
+- (void)setAlarmWithTime:(NSString *)alartmTime andPrepTimeMinutes:(NSString *)prepTimeMinutes
 {
-    self.alarmStatusTextLabel.text = @"The next alarm is set for...";
+    self.alarmStatusTextLabel.text = @"You must leave your house at...";
     self.displayTimeTextLabel.text = alartmTime;
     self.alarmButton.titleLabel.textAlignment = UITextAlignmentCenter;
     self.alarmButton.titleLabel.text = @"Change";
+    
+    if ([prepTimeMinutes length] == 0) {
+        UIAlertView * alert = [[UIAlertView alloc] 
+                               initWithTitle:@"Alert"
+                               message:@"How long will you need to get ready?"
+                               delegate:nil
+                               cancelButtonTitle:@"OK"
+                               otherButtonTitles:nil];
+        
+        [alert show];
+        return;
+    }
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 

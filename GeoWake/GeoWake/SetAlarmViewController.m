@@ -59,22 +59,12 @@ CGPoint originalCenter;
     
     NSLog(@"The selected date & time is %@", dateString);
     
-    if ([morningPrepTextField.text length] == 0) {
-        UIAlertView * alert = [[UIAlertView alloc] 
-                               initWithTitle:@"Alert"
-                               message:@"How long will you need to get ready?"
-                               delegate:nil
-                               cancelButtonTitle:@"OK"
-                               otherButtonTitles:nil];
-        
-        [alert show];
-    }
-    
     int prepTimeMinutes = [morningPrepTextField.text intValue];
     NSLog(@"Number of minutes: %i", prepTimeMinutes);
     
     
-    [[self delegate] setAlarmWithTime:dateString];
+    [[self delegate] setAlarmWithTime:dateString 
+                   andPrepTimeMinutes:morningPrepTextField.text];
     
 }
 
