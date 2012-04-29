@@ -24,6 +24,7 @@
 @synthesize locationManager;
 @synthesize location;
 @synthesize disableAlarm;
+@synthesize localNotification;
 
 
 - (void)viewDidLoad
@@ -60,11 +61,12 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    NSLog(@"Location: %@", newLocation);
+//    NSLog(@"Location: %@", newLocation);
     NSLog(@"%f", [newLocation distanceFromLocation:self.location]);
-    if ([newLocation distanceFromLocation:self.location] > 10) {
-        self.disableAlarm = YES;
-        [self.locationManager stopUpdatingLocation];
+    if ([newLocation distanceFromLocation:self.location] > 20) {
+        // Remove alarm
+        NSLog(@"Alarm REMOVED");
+        [[UIApplication sharedApplication] cancelLocalNotification:self.localNotification];
     }
 }
 
@@ -118,15 +120,15 @@
 }
 
 - (void) setLocalNotificationWithDate: (NSDate *) notificationDate {
-    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification = [[UILocalNotification alloc] init];
     localNotification.fireDate = notificationDate;
     localNotification.alertBody = @"Time to wake up!";
     localNotification.soundName = UILocalNotificationDefaultSoundName;
     
-    if (disableAlarm) {
-        [[UIApplication sharedApplication]scheduleLocalNotification:localNotification];
-    }
-    
+
+    NSLog(@"Alarm Set");
+    [[UIApplication sharedApplication]scheduleLocalNotification:localNotification];
+
 }
 
 
