@@ -15,6 +15,9 @@
 }
 
 @property (nonatomic, weak) IBOutlet UILabel *coordinatesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *leavingTimeTextLabel;
+@property (weak, nonatomic) IBOutlet UITableViewCell *prepTimeTextLabel;
+@property (weak, nonatomic) IBOutlet UIDatePicker *timePicker;
 
 
 - (void)startMonitoringForLocationChanges:(CLLocation *)location;

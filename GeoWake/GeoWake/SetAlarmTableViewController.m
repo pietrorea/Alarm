@@ -14,6 +14,9 @@
 
 @implementation SetAlarmTableViewController
 @synthesize coordinatesLabel;
+@synthesize leavingTimeTextLabel;
+@synthesize prepTimeTextLabel;
+@synthesize timePicker;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,6 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [timePicker addTarget:self action:@selector(timeChanged) forControlEvents:UIControlEventValueChanged];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -37,6 +42,9 @@
 
 - (void)viewDidUnload
 {
+    [self setLeavingTimeTextLabel:nil];
+    [self setPrepTimeTextLabel:nil];
+    [self setTimePicker:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -91,13 +99,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    if (indexPath.row == 0) {
+        
+        timePicker.datePickerMode = UIDatePickerModeDateAndTime;
+        
+    }
+    
+    else if (indexPath.row == 1) {
+        
+        timePicker.datePickerMode = UIDatePickerModeCountDownTimer;
+        
+    }
+    
+
 }
 
 - (void)startMonitoringForLocationChanges:(CLLocation *)location
@@ -125,6 +139,11 @@
 {    
     SettingsViewController *settingsVC = segue.destinationViewController;
     settingsVC.delegate = self;
+}
+
+- (void) timeChanged
+{
+    NSLog(@"The timePicker value has changed!");
 }
 
 @end
