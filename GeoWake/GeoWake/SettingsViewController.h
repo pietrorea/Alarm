@@ -28,6 +28,6 @@
 
 @protocol SettingsViewControllerDelegate <NSObject>
 
-- (void)startMonitoringForLocationChanges:(CLLocation *)location;
+- (void)saveLocation:(CLLocation *)location;
 
 @end

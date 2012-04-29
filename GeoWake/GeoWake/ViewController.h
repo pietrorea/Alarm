@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SetAlarmViewController.h"
 
-@interface ViewController : UIViewController <SetAlarmTableViewControllerDelegate>
+@interface ViewController : UIViewController <SetAlarmTableViewControllerDelegate, CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *displayTimeTextLabel;
 @property (weak, nonatomic) IBOutlet UILabel *alarmStatusTextLabel;
 @property (weak, nonatomic) IBOutlet UIButton *alarmButton;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) CLLocation *location;
 
 - (void) setLocalNotificationWithDate: (NSDate *) notificationDate;
 

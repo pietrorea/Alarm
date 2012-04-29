@@ -18,18 +18,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *leavingTimeTextLabel;
 @property (weak, nonatomic) IBOutlet UIDatePicker *timePicker;
 @property (weak, nonatomic) IBOutlet UILabel *prepTimeTextLabel;
+@property (strong, nonatomic) CLLocation *location;
 @property (weak, nonatomic) id <SetAlarmTableViewControllerDelegate> delegate;
 
 
 - (IBAction)doneSettingAlarmButton:(id)sender;
 
 
-- (void)startMonitoringForLocationChanges:(CLLocation *)location;
+- (void)saveLocation:(CLLocation *)location;
 
 @end
 
 @protocol SetAlarmTableViewControllerDelegate <NSObject>
 
-- (void) doneSettingAlarm: (NSDate *) alarmTime andPrepTimeMinutes: (NSString *) prepTimeMinutes; 
+- (void) doneSettingAlarm: (NSDate *) alarmTime andPrepTimeMinutes:(NSString *)prepTimeMinutes andLocation:(CLLocation *)loc; 
 
 @end

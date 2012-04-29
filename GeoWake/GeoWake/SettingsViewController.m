@@ -62,6 +62,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
+    // This method not really used
     NSLog(@"HEYYYY!");
     
 }
@@ -82,7 +83,8 @@
 }
 
 - (IBAction)setLocation:(id)sender {
-    [self.delegate startMonitoringForLocationChanges:locationManager.location];
+    [self.delegate saveLocation:locationManager.location];
     [locationManager stopUpdatingLocation];
 }
+
 @end

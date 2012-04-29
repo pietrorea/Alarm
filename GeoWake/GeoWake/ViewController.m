@@ -8,6 +8,7 @@
 
 #import "SetAlarmTableViewController.h"
 #import "ViewController.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface ViewController ()
 
@@ -18,6 +19,8 @@
 @synthesize displayTimeTextLabel;
 @synthesize alarmStatusTextLabel;
 @synthesize alarmButton;
+@synthesize locationManager;
+@synthesize location;
 
 - (void)viewDidLoad
 {
@@ -39,9 +42,10 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-
-- (void) doneSettingAlarm: (NSDate *) alarmTime andPrepTimeMinutes: (NSString *) prepTimeMinutes
+- (void) doneSettingAlarm: (NSDate *) alarmTime andPrepTimeMinutes: (NSString *) prepTimeMinutes andLocation:(CLLocation *)loc
 {
+    self.location = loc;
+
     NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"h:mma";
     NSString *dateString = [dateFormatter stringFromDate:alarmTime];

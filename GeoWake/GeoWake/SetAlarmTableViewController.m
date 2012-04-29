@@ -21,6 +21,7 @@ NSDate *currentAlarmDate;
 @synthesize timePicker;
 @synthesize prepTimeTextLabel;
 @synthesize delegate;
+@synthesize location;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -83,20 +84,19 @@ NSDate *currentAlarmDate;
 - (IBAction)doneSettingAlarmButton:(id)sender 
 {
     [self.delegate doneSettingAlarm:currentAlarmDate
-                 andPrepTimeMinutes:prepTimeTextLabel.text];
+                 andPrepTimeMinutes:prepTimeTextLabel.text andLocation:self.location];
     
 }
 
-- (void)startMonitoringForLocationChanges:(CLLocation *)location
+- (void)saveLocation:(CLLocation *)loc
 {
-    NSLog(@"HELLO?");
-    NSLog(@"%@", location);
+    NSLog(@"%@", loc);
     
-    // Create region and start monitoring it
-    
+    // Save location
+    self.location = loc;
     
     // Set coordinates label
-    self.coordinatesLabel.text = [NSString stringWithFormat:@"%f, %f", location.coordinate.latitude, location.coordinate.longitude];
+    self.coordinatesLabel.text = [NSString stringWithFormat:@"%f, %f", self.location.coordinate.latitude, self.location.coordinate.longitude];
     
     // Dismiss location view controller
     [self.navigationController popViewControllerAnimated:YES];
