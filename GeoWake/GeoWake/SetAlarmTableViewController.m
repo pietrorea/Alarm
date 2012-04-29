@@ -108,12 +108,6 @@ NSDate *currentAlarmDate;
     
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender 
-{    
-    SettingsViewController *settingsVC = segue.destinationViewController;
-    settingsVC.delegate = self;
-}
-
 - (void) timeChanged
 {
     

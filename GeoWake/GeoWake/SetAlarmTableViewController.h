@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-#import "SettingsViewController.h"
 
 @protocol SetAlarmTableViewControllerDelegate;
 
-@interface SetAlarmTableViewController : UITableViewController <SettingsViewControllerDelegate, CLLocationManagerDelegate> 
+@interface SetAlarmTableViewController : UITableViewController <CLLocationManagerDelegate> 
 
 @property (nonatomic, weak) IBOutlet UILabel *coordinatesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *leavingTimeTextLabel;
