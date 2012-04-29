@@ -6,13 +6,14 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import "SetAlarmTableViewController.h"
 #import "ViewController.h"
 
 @interface ViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ViewController 
 
 @synthesize displayTimeTextLabel;
 @synthesize alarmStatusTextLabel;
@@ -68,12 +69,49 @@
     [self.navigationController popViewControllerAnimated:YES];
 } */
 
-
-
-/*- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void) doneSettingAlarm: (NSString *) alartmTime andPrepTimeMinutes: (NSString *) prepTimeMinutes
 {
-    SetAlarmViewController *setAlarmViewController = [segue destinationViewController];
-    setAlarmViewController.delegate = self;
-}*/
+    self.displayTimeTextLabel.text = alartmTime;
+    self.alarmStatusTextLabel.text = @"You must leave your house at...";
+    self.alarmButton.titleLabel.textAlignment = UITextAlignmentCenter;
+    self.alarmButton.titleLabel.text = @"Change";
+    
+    
+    if ([alartmTime length] == 0) {
+        UIAlertView * alert = [[UIAlertView alloc] 
+                               initWithTitle:@"Alert"
+                               message:@"When do you want to leave your house?"
+                               delegate:nil
+                               cancelButtonTitle:@"OK"
+                               otherButtonTitles:nil];
+        
+        [alert show];
+        return;
+    }
+
+    
+    if ([prepTimeMinutes length] == 0) {
+        UIAlertView * alert = [[UIAlertView alloc] 
+                               initWithTitle:@"Alert"
+                               message:@"How long will you need to get ready?"
+                               delegate:nil
+                               cancelButtonTitle:@"OK"
+                               otherButtonTitles:nil];
+        
+        [alert show];
+        return;
+    }
+    
+    
+    [self.navigationController popViewControllerAnimated:YES];
+
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{    
+    SetAlarmTableViewController *svc = [segue destinationViewController];
+    svc.delegate = self;
+}
 
 @end

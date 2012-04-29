@@ -13,10 +13,12 @@
 @end
 
 @implementation SetAlarmTableViewController
+
 @synthesize coordinatesLabel;
 @synthesize leavingTimeTextLabel;
-@synthesize prepTimeTextLabel;
 @synthesize timePicker;
+@synthesize prepTimeTextLabel;
+@synthesize delegate;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -45,6 +47,7 @@
     [self setLeavingTimeTextLabel:nil];
     [self setPrepTimeTextLabel:nil];
     [self setTimePicker:nil];
+    [self setPrepTimeTextLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -114,6 +117,13 @@
 
 }
 
+- (IBAction)doneSettingAlarmButton:(id)sender 
+{
+    [self.delegate doneSettingAlarm:leavingTimeTextLabel.text
+                 andPrepTimeMinutes:prepTimeTextLabel.text];
+    
+}
+
 - (void)startMonitoringForLocationChanges:(CLLocation *)location
 {
     NSLog(@"HELLO?");
@@ -143,6 +153,32 @@
 
 - (void) timeChanged
 {
+    
+    NSIndexPath * pathToSelectedRow = [self.tableView indexPathForSelectedRow];
+    
+    if (pathToSelectedRow.row == 0) {
+        
+        NSDate * selectedDate = [timePicker date];
+        NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateFormat = @"h:mma";
+        NSString *dateString = [dateFormatter stringFromDate:selectedDate];
+        leavingTimeTextLabel.text = dateString;
+        
+        NSLog(@"%@", selectedDate);
+    }
+    
+    if (pathToSelectedRow.row == 1) {
+        
+        NSDate * selectedDate = [timePicker date];
+        NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateFormat = @"h:mm";
+        NSString *dateString = [dateFormatter stringFromDate:selectedDate];
+        prepTimeTextLabel.text = dateString;
+        
+        NSLog(@"%@", selectedDate);
+    }
+
+        
     NSLog(@"The timePicker value has changed!");
 }
 
