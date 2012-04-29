@@ -101,19 +101,6 @@
     }
 
     
-    if ([prepTimeMinutes length] == 0) {
-        UIAlertView * alert = [[UIAlertView alloc] 
-                               initWithTitle:@"Alert"
-                               message:@"How long will you need to get ready?"
-                               delegate:nil
-                               cancelButtonTitle:@"OK"
-                               otherButtonTitles:nil];
-        
-        [alert show];
-        return;
-    }
-    
-    
     [self setLocalNotificationWithDate:alarmTime];
     [self.navigationController popViewControllerAnimated:YES];
     
