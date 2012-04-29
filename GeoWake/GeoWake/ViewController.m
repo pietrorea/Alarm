@@ -20,9 +20,11 @@
 @synthesize displayTimeTextLabel;
 @synthesize alarmStatusTextLabel;
 @synthesize alarmButton;
+
 @synthesize locationManager;
 @synthesize location;
 @synthesize disableAlarm;
+
 
 - (void)viewDidLoad
 {
